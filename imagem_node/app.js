@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 1000
 
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     res.send('Olá minha imagem!')
 })
 
