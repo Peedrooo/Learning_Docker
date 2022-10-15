@@ -43,6 +43,17 @@
 - docker rm -f <container_id/container_name> -> Remove um container a força
 ```
 
+### Volume
+
+```bash
+- docker volume create <volume_name> -> Cria um volume
+- docker volume ls -> Lista os volumes
+- docker volume rm <volume_name> -> Remove um volume
+- docker volume prune -> Remove todos os volumes não utilizados
+- docker create volume <volume_name> -> Cria um volume
+- docker run -v <volume_name>:<diretorio_container> <image_name> -> Cria um container e monta um volume
+```
+
 ## Dockerfile
 
 - FROM -> Imagem base
@@ -57,4 +68,6 @@ docker <command> --help -> Exibe ajuda do comando
 docker system prune -> Remove todos os containers e imagens não utilizados
 docker cp <container_id>:/<path_arquivo> <path_destino> -> Copia arquivo do container para o host 
 docker top <container_id> -> Exibe processos do container
+docker stats -> Exibe estatísticas dos containers
+docker inspect <container_id> -> Exibe informações do container
 ```
