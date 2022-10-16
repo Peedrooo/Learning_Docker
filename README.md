@@ -13,7 +13,7 @@
 
 ```bash
 - docker build <diretorio_imagem> .-> Cria imagem a partir de um diretorio
-- dockber build -t <nome_imagem>:<versao> . -> Cria imagem a partir de um diretorio, a nomeia e insere uma tag
+- docker build -t <nome_imagem>:<versao> . -> Cria imagem a partir de um diretorio, a nomeia e insere uma tag
 - docker pull <nome_imagem> -> Baixa imagem
 - docker images -> Lista imagens
 - docker rmi <nome_imagem> -> Remove imagem
@@ -52,6 +52,27 @@
 - docker volume prune -> Remove todos os volumes não utilizados
 - docker create volume <volume_name> -> Cria um volume
 - docker run -v <volume_name>:<diretorio_container> <image_name> -> Cria um container e monta um volume
+```
+
+### Network
+
+- Externa -> Conexão com uma API de um servidor remoto
+- Interna -> Conexão entre containers - utiliza driver bridge e permite a comunicação entre dois ou mais containers
+- Host -> Comunicação com a máquina que está executando o container
+
+- Drivers
+  - bridge -> Rede padrão do docker (default)
+  - host -> Rede da máquina que está executando o container
+  - macvlan -> Rede com endereço MAC
+  - nove -> remove todas conexões de rede de um container
+  - plugins -> permite extensões de terceiros para criar outras redes
+
+```bash
+    - docker network ls -> Lista as redes
+    - docker network create <network_name> -> Cria uma rede
+    - docker network create -d <driver_name> <network_name> -> Cria uma rede com um driver específico
+    - docker network rm <network_name> -> Remove uma rede
+    - docker network prune -> Remove todas as redes não utilizadas
 ```
 
 ## Dockerfile
