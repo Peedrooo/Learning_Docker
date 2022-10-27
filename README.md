@@ -73,6 +73,9 @@
     - docker network create -d <driver_name> <network_name> -> Cria uma rede com um driver específico
     - docker network rm <network_name> -> Remove uma rede
     - docker network prune -> Remove todas as redes não utilizadas
+    - docker network connect <network_name> <container_name> -> Conecta um container a uma rede
+    - docker network disconnect <network_name> <container_name> -> Desconecta um container de uma rede
+    - docker network inspect <network_name> -> Exibe informações de uma rede
 ```
 
 ## Dockerfile
