@@ -85,6 +85,21 @@
 - EXPOSE -> Porta da aplicação
 - COPY -> Quais arquivos precisam ser copiados
 
+## Docker Compose
+
+- version -> Versão do docker compose
+- services -> Serviços que serão executados
+- volumes -> Volumes que serão criados
+- networks -> Redes que serão criadas
+- build -> Diretório da imagem
+- image -> Imagem que será utilizada
+
+```bash
+  - docker-compose up -> Inicia os containers
+  - docker-compose up -d -> Inicia os containers em background
+  - docker-compose down -> Para os containers
+```
+
 ## Utilidades
 
 ```bash
