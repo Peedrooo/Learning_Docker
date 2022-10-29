@@ -1,2 +1,36 @@
 nome: "Pedro"
 idade: 20
+
+# Informação sobre objeto
+objeto:
+  versao: 2.0
+  arquivo: "test.yaml"
+
+string:
+  sem aspas: Teste
+  com aspas: 'Teste'
+
+valor nulo:
+  acento: ~
+  palavra: null
+
+boolean:
+  verdadeiro_B: true
+  verdadeiro_C: on
+  verdadeiro_A: yes
+
+array:
+  tipo 1:
+    - 1
+    - 2
+    - 3
+  tipo 2: [1, 2, 3]
+
+dicionarios:
+  obj: {a: 1, b: 2, c: 3, interno: {d: 1}}
+  dict: 
+    a: 1
+    b: 2
+    c: 3
+    interno:
+      d: 1
