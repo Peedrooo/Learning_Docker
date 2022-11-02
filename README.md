@@ -98,6 +98,13 @@
   - docker-compose up -> Inicia os containers
   - docker-compose up -d -> Inicia os containers em background
   - docker-compose down -> Para os containers
+  - docker-compose down -v -> Para os containers e remove os volumes
+  - docker-compose ps -> Lista os containers
+  - docker-compose logs -> Exibe os logs dos containers
+  - docker-compose logs -f -> Exibe os logs dos containers em tempo real
+  - docker-compose logs -f <service_name> -> Exibe os logs de um serviço em tempo real
+  - docker-compose exec <service_name> <command> -> Executa um comando em um container
+  - docker-compose exec -T <service_name> <command> -> Executa um comando em um container sem abrir o terminal
 ```
 
 ## Utilidades
