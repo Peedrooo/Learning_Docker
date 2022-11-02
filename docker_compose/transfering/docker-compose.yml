@@ -1,27 +1,24 @@
 version: '3.3'
 
 services:
-  app:
-    image:
-      build:
-        context: .
-        dockerfile: flask/Dockerfile
-    ports:
-      - "5000:5000"
-    env_file:
-      - .env
 
   db:
-    image: 
-      build:
-        context: .
-        dockerfile: mysql/Dockerfile
-    volumes:
-      - ./mysql/data:/var/lib/mysql
+    image: mysql
     ports:
       - "3306:3306"
     env_file:
-      - .env
+      - config/.env
+    networks:
+      - dockercompose
 
-volumes:
-  db_data: {}
+  app:
+    depends_on:
+      - db
+    image: flask
+    ports:
+      - "5000:5000"
+    networks:
+      - dockercompose
+
+networks:
+  dockercompose:

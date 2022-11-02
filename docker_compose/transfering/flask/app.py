@@ -1,13 +1,13 @@
 import flask
+import os
 from flask import request, json, jsonify
 import requests
-import flask_mysqldb
 from flask_mysqldb import MySQL
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-app.config['MYSQL_HOST'] = 'banco'
+app.config['MYSQL_HOST'] = 'db'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'flaskdocker'
